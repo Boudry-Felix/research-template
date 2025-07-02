@@ -1,0 +1,32 @@
+format:
+  pdf:
+    documentclass: article
+    geometry: 
+      - top=1in
+      - left=1in
+      - right=1in
+      - bottom=1in
+    fontsize: 12pt
+    linestretch: 1.5
+    number-sections: true
+    toc: true
+    toc-depth: 3
+    lof: true
+    lot: true
+    cite-method: biblatex
+    biblio-style: apa
+    keep-tex: false
+    pdf-engine: xelatex
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    theme: default
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: true
+  

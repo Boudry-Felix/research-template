@@ -1,0 +1,34 @@
+---
+title: "Presentation template"
+subtitle: "Subtitle"
+author: "Your Name"
+date: today
+format:
+  revealjs:
+    theme: default
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+---
+
+## Introduction
+
+- First point
+- Second point
+- Third point
+
+## Main Content
+
+### Subsection
+
+Content goes here
+
+## Conclusion
+
+- Summary point 1
+- Summary point 2
+- Thank you!
+
+## Questions?
+
+Contact: your.email@example.com

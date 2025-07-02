@@ -1,0 +1,439 @@
+---
+title: "Research Title"
+subtitle: "A detailed investigation into [specific research question]"
+author:
+  - name: "First Author"
+    orcid: "0000-0000-0000-0000"
+    email: "first.author@university.edu"
+    affiliations:
+      - name: "Department of [Department], University of [Name]"
+        address: "Address Line 1, City, Country"
+  - name: "Second Author"
+    orcid: "0000-0000-0000-0000"
+    email: "second.author@university.edu"
+    affiliations:
+      - name: "Department of [Department], University of [Name]"
+        address: "Address Line 1, City, Country"
+date: today
+abstract: |
+  This study investigates [research question/problem]. Using [methodology], we analyzed [data/subjects] to examine [specific aspects]. Our findings reveal [key results]. These results suggest [implications] and contribute to [field of study] by [contribution]. The study has implications for [practical applications/future research].
+keywords: ["keyword1", "keyword2", "keyword3", "keyword4", "keyword5"]
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+set.seed(42)
+# Load required packages
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(corrplot)
+
+# Set global chunk options
+knitr::opts_chunk$set(
+  fig.width = 8,
+  fig.height = 6,
+  fig.align = "center",
+  out.width = "80%",
+  dpi = 300
+)
+
+# Set ggplot2 theme
+theme_set(theme_minimal())
+```
+
+# Introduction
+
+## Background and Rationale
+
+The field of \[research area\] has seen significant developments in recent years [@citation2023]. However, several gaps remain in our understanding of \[specific topic\]. Previous research has shown that \[previous findings\] [@citation2022], but these studies have limitations including [limitations].
+
+## Research Problem
+
+The primary problem addressed in this study is \[problem statement\]. This issue is important because \[significance\]. Current approaches to \[problem area\] are insufficient due to \[reasons\].
+
+## Research Questions and Hypotheses
+
+This study addresses the following research questions:
+
+1.  **RQ1**: \[First research question\]?
+2.  **RQ2**: \[Second research question\]?
+3.  **RQ3**: \[Third research question\]?
+
+Based on existing literature, we hypothesize that:
+
+-   **H1**: \[First hypothesis\]
+-   **H2**: \[Second hypothesis\]
+-   **H3**: \[Third hypothesis\]
+
+## Objectives
+
+The main objectives of this study are to:
+
+1.  \[First objective\]
+2.  \[Second objective\]
+3.  \[Third objective\]
+
+# Literature Review
+
+## Theoretical Framework
+
+### \[Theory/Model Name\]
+
+The theoretical foundation for this study is based on \[theory name\] [@seminal_citation]. This theory posits that \[theory explanation\]. The key components of this framework include:
+
+-   **Component 1**: \[Description\]
+-   **Component 2**: \[Description\]
+-   **Component 3**: \[Description\]
+
+## Previous Research
+
+### Studies on \[Topic Area 1\]
+
+Research in [topic area] has primarily focused on [focus areas]. @author2023 found that [findings], while @another_author2022 demonstrated \[different findings\]. However, these studies were limited by [limitations].
+
+### Studies on \[Topic Area 2\]
+
+Recent investigations into \[topic area 2\] have revealed \[findings\] [@recent_citation]. The work by @researcher2023 is particularly relevant as it \[relevance\].
+
+## Research Gaps
+
+Despite the extensive research in this area, several gaps remain:
+
+1.  **Gap 1**: \[Description of gap\]
+2.  **Gap 2**: \[Description of gap\]
+3.  **Gap 3**: \[Description of gap\]
+
+# Methodology
+
+## Research Design
+
+This study employs a \[research design type\] design to investigate \[research focus\]. The design was chosen because \[justification\].
+
+## Participants/Sample
+
+### Sample Size and Power Analysis
+
+Power analysis using G\*Power 3.1.9.7 indicated that a minimum sample size of \[n\] participants would be required to detect a medium effect size (Cohen's d = 0.5) with 80% power and $\alpha = 0.05$.
+
+### Recruitment and Selection
+
+Participants were recruited through \[recruitment method\]. Inclusion criteria were:
+
+-   \[Criterion 1\]
+-   \[Criterion 2\]
+-   \[Criterion 3\]
+
+Exclusion criteria included:
+
+-   \[Exclusion 1\]
+-   \[Exclusion 2\]
+
+## Materials and Measures
+
+### \[Instrument 1 Name\]
+
+\[Description of instrument, reliability, validity information\]
+
+### \[Instrument 2 Name\]
+
+\[Description of instrument, reliability, validity information\]
+
+## Procedure
+
+The study procedure involved the following steps:
+
+1.  **Pre-screening**: \[Description\]
+2.  **Baseline assessment**: \[Description\]
+3.  **Intervention/manipulation**: \[Description\]
+4.  **Post-assessment**: \[Description\]
+5.  **Follow-up**: \[Description\]
+
+## Data Analysis Plan
+
+Data analysis was conducted using R version `r R.version.string` [@R-base]. The analysis plan included:
+
+### Descriptive Statistics
+
+Descriptive statistics were calculated for all variables, including measures of central tendency, variability, and distribution shape.
+
+### Inferential Statistics
+
+The following analytical approaches were used:
+
+-   **Primary analysis**: \[Statistical test\] to examine \[specific comparison\]
+-   **Secondary analyses**: \[Additional tests\]
+-   **Exploratory analyses**: \[Exploratory approaches\]
+
+### Missing Data
+
+Missing data patterns were examined and handled using \[approach\].
+
+## Ethical Considerations
+
+This study was approved by the \[Institution\] Institutional Review Board (IRB #\[number\]). All participants provided informed consent before participation. Data confidentiality and anonymity were maintained throughout the study.
+
+# Results
+
+```{r}
+#| label: load-data
+#| include: false
+
+# Load data using targets
+# tar_load(cleaned_data)
+# tar_load(analysis_results)
+
+# For template purposes, create sample data
+sample_data <- data.frame(
+  group = rep(c("Control", "Treatment"), each = 50),
+  pre_score = rnorm(100, mean = 50, sd = 10),
+  post_score = rnorm(100, mean = c(rep(52, 50), rep(58, 50)), sd = 10),
+  age = rnorm(100, mean = 25, sd = 5),
+  gender = sample(c("Male", "Female"), 100, replace = TRUE)
+)
+```
+
+## Descriptive Statistics
+
+### Sample Characteristics
+
+The final sample consisted of N = `r nrow(sample_data)` participants. Sample characteristics are presented in @tbl-demographics.
+
+```{r}
+#| label: tbl-demographics
+#| tbl-cap: "Sample Demographics"
+
+# Create demographics table
+demographics <- sample_data %>%
+  summarise(
+    N = n(),
+    `Age M (SD)` = paste0(round(mean(age), 1), " (", round(sd(age), 1), ")"),
+    `Female n (%)` = paste0(
+      sum(gender == "Female"),
+      " (",
+      round(sum(gender == "Female") / n() * 100, 1),
+      "%)"
+    )
+  )
+
+knitr::kable(demographics)
+```
+
+### Descriptive Statistics by Group
+
+@tbl-descriptives presents descriptive statistics for key variables by experimental condition.
+
+```{r}
+#| label: tbl-descriptives
+#| tbl-cap: "Descriptive Statistics by Group"
+
+# Create descriptives table
+descriptives <- sample_data %>%
+  group_by(group) %>%
+  summarise(
+    N = n(),
+    `Pre-test M (SD)` = paste0(
+      round(mean(pre_score), 2),
+      " (",
+      round(sd(pre_score), 2),
+      ")"
+    ),
+    `Post-test M (SD)` = paste0(
+      round(mean(post_score), 2),
+      " (",
+      round(sd(post_score), 2),
+      ")"
+    ),
+    .groups = 'drop'
+  )
+
+knitr::kable(descriptives)
+```
+
+## Primary Analyses
+
+### Research Question 1
+
+To address RQ1, we conducted \[statistical test\]. Results indicated \[findings\]. @fig-main-results illustrates the primary findings.
+
+```{r}
+#| label: fig-main-results
+#| fig-cap: "Main Results: Pre- and Post-test Scores by Group"
+
+# Create main results figure
+sample_data %>%
+  pivot_longer(
+    cols = c(pre_score, post_score),
+    names_to = "time",
+    values_to = "score"
+  ) %>%
+  mutate(time = ifelse(time == "pre_score", "Pre-test", "Post-test")) %>%
+  ggplot(aes(x = time, y = score, fill = group)) +
+  geom_boxplot(alpha = 0.7) +
+  geom_point(
+    position = position_jitterdodge(dodge.width = 0.75),
+    alpha = 0.3,
+    size = 0.8
+  ) +
+  labs(
+    x = "Time Point",
+    y = "Score",
+    fill = "Group",
+    title = "Pre- and Post-test Scores by Experimental Group"
+  ) +
+  theme_minimal() +
+  scale_fill_brewer(type = "qual", palette = "Set2")
+```
+
+### Statistical Test Results
+
+```{r}
+#| label: statistical-tests
+
+# Conduct statistical tests
+t_test_result <- t.test(post_score ~ group, data = sample_data)
+
+# Effect size calculation
+library(effectsize)
+effect_size <- cohens_d(post_score ~ group, data = sample_data)
+```
+
+A two-sample t-test revealed a statistically significant difference between groups, t(`r round(t_test_result$parameter, 2)`) = `r round(t_test_result$statistic, 2)`, p `r ifelse(t_test_result$p.value < 0.001, "< 0.001", paste("=", round(t_test_result$p.value, 3)))`, Cohen's d = `r round(effect_size$Cohens_d, 2)`, 95% CI \[`r round(t_test_result$conf.int[1], 2)`, `r round(t_test_result$conf.int[2], 2)`\].
+
+## Secondary Analyses
+
+### Additional Analysis 1
+
+\[Description of additional analysis and results\]
+
+### Additional Analysis 2
+
+\[Description of additional analysis and results\]
+
+## Exploratory Analyses
+
+### Correlation Analysis
+
+```{r}
+#| label: fig-correlations
+#| fig-cap: "Correlation Matrix of Study Variables"
+
+# Create correlation plot
+cor_data <- sample_data %>%
+  select(pre_score, post_score, age) %>%
+  cor(use = "complete.obs")
+
+corrplot(
+  cor_data,
+  method = "color",
+  type = "upper",
+  order = "hclust",
+  tl.cex = 0.8,
+  tl.col = "black"
+)
+```
+
+# Discussion
+
+## Summary of Findings
+
+This study investigated \[research focus\] and found several important results:
+
+1.  **Finding 1**: \[Description and interpretation\]
+2.  **Finding 2**: \[Description and interpretation\]
+3.  **Finding 3**: \[Description and interpretation\]
+
+## Interpretation of Results
+
+### Theoretical Implications
+
+Our findings support \[theoretical position\] and extend previous work by \[extension\]. The results are consistent with \[theory\] which suggests \[theoretical explanation\].
+
+### Practical Implications
+
+These findings have several practical implications:
+
+-   **Implication 1**: \[Description\]
+-   **Implication 2**: \[Description\]
+-   **Implication 3**: \[Description\]
+
+## Limitations
+
+Several limitations should be considered when interpreting these results:
+
+1.  **Limitation 1**: \[Description and impact\]
+2.  **Limitation 2**: \[Description and impact\]
+3.  **Limitation 3**: \[Description and impact\]
+
+## Future Directions
+
+Future research should address these limitations and explore:
+
+-   \[Future direction 1\]
+-   \[Future direction 2\]
+-   \[Future direction 3\]
+
+## Conclusions
+
+In conclusion, this study provides evidence that \[main conclusion\]. The findings contribute to \[field\] by \[contribution\] and have implications for \[applications\]. While limitations exist, the results suggest \[final interpretation\] and support the need for \[recommendations\].
+
+# Acknowledgments
+
+We thank [acknowledgments]. This research was supported by \[funding information\].
+
+# References
+
+::: {#refs}
+:::
+
+# Appendices
+
+## Appendix A: Additional Tables
+
+```{r}
+#| label: tbl-appendix-a
+#| tbl-cap: "Additional Analysis Results"
+
+# Additional table
+additional_results <- sample_data %>%
+  group_by(group, gender) %>%
+  summarise(
+    N = n(),
+    `Mean Score` = round(mean(post_score), 2),
+    `SD` = round(sd(post_score), 2),
+    .groups = 'drop'
+  )
+
+knitr::kable(additional_results)
+```
+
+## Appendix B: Additional Figures
+
+```{r}
+#| label: fig-appendix-b
+#| fig-cap: "Distribution of Post-test Scores by Group"
+
+sample_data %>%
+  ggplot(aes(x = post_score, fill = group)) +
+  geom_histogram(alpha = 0.7, bins = 20, position = "identity") +
+  facet_wrap(~group, ncol = 1) +
+  labs(
+    x = "Post-test Score",
+    y = "Frequency",
+    fill = "Group",
+    title = "Distribution of Post-test Scores"
+  ) +
+  theme_minimal() +
+  scale_fill_brewer(type = "qual", palette = "Set2")
+```
+
+## Appendix C: R Session Information
+
+```{r}
+#| label: session-info
+#| echo: true
+
+sessionInfo()
+```

@@ -1,0 +1,46 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+  preview: 
+    port: 3333
+    watch-inputs: true
+    navigate: true
+
+website:
+  title: "Research project template"
+  navbar:
+    left: 
+      - text: Home
+        href: index.qmd
+    right:
+      - text: Slides
+        href: slides/index.qmd
+      - text: Manuscript
+        href: manuscript/manuscript.qmd
+      - icon: github
+        menu: 
+          - text: Source Code
+            href: https://github.com/Boudry-Felix/research-template
+          - text: Discussion
+            href: https://github.com/Boudry-Felix/research-template/discussions
+          - text: Issues
+            href: https://github.com/Boudry-Felix/research-template/issues
+
+format:
+  html:
+    respect-user-color-scheme: true
+    theme:
+      dark: darkly
+      light: flatly
+
+execute: 
+  freeze: false
+
+knitr:
+  opts_chunk: 
+    fig.align: center
+    fig.retina: 3
+    fig.width: 6
+    fig.height: 3.708
+    dev: svg
