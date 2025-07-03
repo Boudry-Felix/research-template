@@ -1,12 +1,79 @@
 ---
-listing:
-  contents: playground
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
-  fields: ["title", "description", "date", "author"]
+title: "Research Project template"
+subtitle: "A comprehensive study investigating [research topic]"
+author: 
+  - name: "Principal Investigator Name"
+    affiliation: "University/Institution"
+    email: "email@institution.edu"
+  - name: "Co-Investigator Name"
+    affiliation: "Collaborating Institution"
+    email: "email@collaborator.edu"
+date: last-modified
 page-layout: full
-title-block-banner: true
 ---
+
+## About This Project
+
+This research project investigates [brief description of research question and objectives]. Our interdisciplinary team combines expertise in [relevant fields] to address [specific problem or gap in knowledge].
+
+### Research Objectives
+
+- **Primary Objective**: [Main research goal]
+- **Secondary Objectives**: 
+  - [Specific aim 1]
+  - [Specific aim 2]
+  - [Specific aim 3]
+
+### Methodology
+
+Our approach utilizes [brief description of methods, data sources, analytical frameworks].
+
+## Contributors
+
+### Principal Investigator
+**[Name]** - [Title], [Department], [Institution]
+- Expertise: [Areas of specialization]
+- Contact: [email@institution.edu]
+
+### Co-Investigators
+**[Name]** - [Title], [Institution]
+- Role: [Specific contribution to project]
+
+**[Name]** - [Title], [Institution]
+- Role: [Specific contribution to project]
+
+### Research Team
+- **Graduate Students**: [Names and roles]
+- **Research Assistants**: [Names and roles]
+- **Collaborators**: [External partners]
+
+## Institutional Affiliations
+
+- **[Primary Institution]** - [Department/School]
+- **[Collaborating Institution 1]** - [Department/School]
+- **[Collaborating Institution 2]** - [Department/School]
+
+## Funding & Support
+
+This research is supported by:
+
+- **[Funding Agency]** - Grant #[Number] ([Amount], [Duration])
+- **[Institution]** - [Type of support]
+- **[Additional Funders]** - [Details]
+
+## Project Timeline
+
+- **Phase 1** ([Dates]): [Description]
+- **Phase 2** ([Dates]): [Description]
+- **Phase 3** ([Dates]): [Description]
+
+## Publications & Outputs
+
+- [Expected publications, presentations, datasets]
+- [Links to related work]
+
+## Contact Information
+
+For inquiries about this research:
+- **Principal Investigator**: [email@institution.edu]
+- **Project Coordinator**: [email@institution.edu]

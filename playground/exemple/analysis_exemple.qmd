@@ -7,7 +7,6 @@ format:
     toc: true
     toc-depth: 3
     code-fold: true
-    theme: bootstrap
     embed-resources: true
 execute:
   warning: false

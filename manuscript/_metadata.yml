@@ -22,7 +22,6 @@ format:
     toc-depth: 3
     number-sections: true
     code-fold: true
-    theme: default
 bibliography: references.bib
 execute:
   echo: false

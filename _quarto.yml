@@ -13,6 +13,8 @@ website:
     left: 
       - text: Home
         href: index.qmd
+      - text: Analysis
+        href: playground/playground.qmd
     right:
       - text: Slides
         href: slides/index.qmd

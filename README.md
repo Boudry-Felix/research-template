@@ -35,6 +35,8 @@ This template provides a structured foundation for academic research projects wi
 ├── index.qmd          # Main document/report
 ├── renv/              # Package environment
 ├── renv.lock          # Package lockfile
+├── results/           # Store results from heavy scripts
+├── scripts/           # Heavy scripts that should not be run each time
 └── README.md          # This file
 ```
 
@@ -42,7 +44,7 @@ This template provides a structured foundation for academic research projects wi
 
 - **Reproducible**: All dependencies tracked with `renv`
 - **Flexible**: Multiple output formats via Quarto
-- **Collaborative**: Version control ready with `.gitignore` configured
+- **Collaborative**: Version control ready 
 
 ## Usage
 
