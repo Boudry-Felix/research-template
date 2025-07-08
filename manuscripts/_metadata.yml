@@ -24,7 +24,6 @@ format:
     code-fold: true
 bibliography: references.bib
 execute:
-  echo: false
   warning: false
   message: false
   cache: true

@@ -3,9 +3,9 @@ project:
   render:
     - "*.qmd"
   preview: 
-    port: 3333
     watch-inputs: true
     navigate: true
+  execute-dir: project
 
 website:
   title: "Research project template"
@@ -19,7 +19,7 @@ website:
       - text: Slides
         href: slides/index.qmd
       - text: Manuscript
-        href: manuscript/manuscript.qmd
+        href: manuscripts/manuscripts.qmd
       - icon: github
         menu: 
           - text: Source Code
@@ -35,6 +35,10 @@ format:
     theme:
       dark: darkly
       light: flatly
+    toc: true
+    code-fold: true
+    code-summary: "Show code"
+    page-layout: full
 
 execute: 
   freeze: false
@@ -42,7 +46,3 @@ execute:
 knitr:
   opts_chunk: 
     fig.align: center
-    fig.retina: 3
-    fig.width: 6
-    fig.height: 3.708
-    dev: svg

@@ -9,7 +9,6 @@ author:
     affiliation: "Collaborating Institution"
     email: "email@collaborator.edu"
 date: last-modified
-page-layout: full
 ---
 
 ## About This Project
